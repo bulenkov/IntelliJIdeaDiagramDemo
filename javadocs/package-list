@@ -1,0 +1,9 @@
+com.intellij.diagram
+com.intellij.diagram.actions
+com.intellij.diagram.components
+com.intellij.diagram.extras
+com.intellij.diagram.extras.providers
+com.intellij.diagram.presentation
+com.intellij.diagram.settings
+com.intellij.diagram.util
+com.intellij.diagram.vcs
