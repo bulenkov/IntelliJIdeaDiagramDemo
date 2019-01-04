@@ -25,8 +25,7 @@ intellij {
 }
 patchPluginXml {
     changeNotes """
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>"""
+      updated to run in <em>Intellij Ultimate 2013.3.*</em>"""
 }
 
 apply plugin: 'idea'

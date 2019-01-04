@@ -14,12 +14,12 @@
   ~ limitations under the License.
   -->
 
-<idea-plugin version="2">
+<idea-plugin>
   <id>com.intellij.example.diagram</id>
   <name>IntelliJ Diagramming framework demo</name>
   <version>1.0</version>
   <vendor email="kb@jetbrains.com" url="http://www.jetbrains.com">JetBrains</vendor>
-  <depends>com.intellij.diagram</depends>
+
   <description><![CDATA[
       Diagrams demo<br>
       ]]></description>
@@ -29,13 +29,11 @@
   </change-notes>
 
   <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
-  <idea-version since-build="107.105"/>
+  <idea-version since-build="183" until-build="191.*"/>
 
-  <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
-       on how to target different products -->
-  <!-- uncomment to enable plugin in all products
-  <depends>com.intellij.modules.lang</depends>
-  -->
+  <!-- To use the UML plugin this plugin needs to run in Intellij Ultimate -->
+  <depends>com.intellij.modules.ultimate</depends>
+  <depends>com.intellij.diagram</depends>
 
   <application-components>
     <!-- Add your application components here -->

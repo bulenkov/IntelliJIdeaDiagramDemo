@@ -66,11 +66,11 @@ public class FileDiagramExtras extends DiagramExtras<VirtualFile> {
 
   @NotNull
   @Override
-  public JComponent createNodeComponent(DiagramNode<VirtualFile> node, DiagramBuilder builder, Point basePoint) {
+  public JComponent createNodeComponent(DiagramNode<VirtualFile> node, DiagramBuilder builder, Point basePoint, JPanel wrapper) {
     if (node.getIdentifyingElement().getParent() == null) {
       return new JLabel(IconLoader.getIcon("/icons/hdd.png"));
     }
-    return super.createNodeComponent(node, builder, basePoint);
+    return super.createNodeComponent(node, builder, basePoint, wrapper);
   }
 
   @Nullable
