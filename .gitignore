@@ -1,0 +1,29 @@
+out/
+.DS_Store
+.gradle/
+/build/
+
+.classpath
+.project
+.settings/
+bin/
+
+# Ignore Intellij IDE specific files
+.idea/
+*.iml
+
+# Ignore Sublime Text workspace (project file is ok):
+*.sublime-workspace
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+
+# Ignore Emacs backup files.
+*~
+/desktop.ini

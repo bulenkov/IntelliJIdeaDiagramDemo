@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '0.4.1'
+}
+
+group 'com.intellij.examples'
+version '2.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}
+
+intellij {
+    version '2018.3.2'
+    pluginName 'diagrams-demo'
+    type 'IU' // the uml plugin is only shipped with Ultimate
+    plugins 'uml'
+    updateSinceUntilBuild false
+}
+patchPluginXml {
+    changeNotes """
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>"""
+}
+
+apply plugin: 'idea'
+idea {
+    project {
+        jdkName = '1.8'
+        languageLevel = JavaVersion.VERSION_1_8
+        vcs = 'Git'
+    }
+}
