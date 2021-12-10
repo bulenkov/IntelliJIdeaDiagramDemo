@@ -29,7 +29,7 @@
   </change-notes>
 
   <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
-  <idea-version since-build="183" until-build="191.*"/>
+  <idea-version since-build="212" until-build="213.*"/>
 
   <!-- To use the UML plugin this plugin needs to run in Intellij Ultimate -->
   <depends>com.intellij.modules.ultimate</depends>

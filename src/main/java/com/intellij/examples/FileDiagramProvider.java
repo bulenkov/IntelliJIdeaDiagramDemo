@@ -72,7 +72,7 @@ public class FileDiagramProvider extends BaseDiagramProvider<VirtualFile> {
     return myColorManager;
   }
 
-  public static FileDiagramProvider getInstance() {
-    return (FileDiagramProvider)DiagramProvider.findByID(ID);
-  }
+//  public static FileDiagramProvider getInstance() {
+//    return (FileDiagramProvider)DiagramProvider<FileDiagramProvider>.findByID(ID);
+//  }
 }

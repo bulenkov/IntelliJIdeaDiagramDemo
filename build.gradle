@@ -1,12 +1,12 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.intellij' version '0.4.1'
+    id 'org.jetbrains.intellij' version '1.2.0'
 }
 
 group 'com.intellij.examples'
 version '2.0'
 
-sourceCompatibility = 1.8
+sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
     mavenCentral()
@@ -17,22 +17,21 @@ dependencies {
 }
 
 intellij {
-    version '2018.3.2'
-    pluginName 'diagrams-demo'
-    type 'IU' // the uml plugin is only shipped with Ultimate
-    plugins 'uml'
-    updateSinceUntilBuild false
+    version = '2021.2'
+    pluginName = 'diagrams-demo'
+    type = 'IU' // the uml plugin is only shipped with Ultimate
+    plugins = ['uml']
+    updateSinceUntilBuild = false
 }
 patchPluginXml {
-    changeNotes """
-      updated to run in <em>Intellij Ultimate 2013.3.*</em>"""
+    changeNotes = """Updated to run in <em>Intellij Ultimate 2021.*</em>"""
 }
 
 apply plugin: 'idea'
 idea {
     project {
-        jdkName = '1.8'
-        languageLevel = JavaVersion.VERSION_1_8
+        jdkName = '11'
+        languageLevel = JavaVersion.VERSION_11
         vcs = 'Git'
     }
 }

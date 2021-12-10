@@ -9,4 +9,4 @@ To run the project simply clone this repo and run the following:
 ./gradlew runIde
 ```
 
-Watch demo at http://screencast.com/t/oHCUdyOt
+Watch demo at http://screencast.com/t/oHCUdyOt (requires Adobe Flash)

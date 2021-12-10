@@ -16,9 +16,12 @@
 
 package com.intellij.examples;
 
+import com.intellij.diagram.DiagramBuilder;
 import com.intellij.diagram.DiagramColorManagerBase;
 import com.intellij.diagram.DiagramEdge;
+import com.intellij.diagram.DiagramNode;
 import com.intellij.ui.JBColor;
+import org.jetbrains.annotations.NotNull;
 
 import java.awt.*;
 
@@ -26,15 +29,22 @@ import java.awt.*;
  * @author Konstantin Bulenkov
  */
 public class FileDiagramColorManager extends DiagramColorManagerBase {
+
   @Override
-  public Color getEdgeColor(DiagramEdge edge) {
+  public @NotNull Color getNodeForeground(@NotNull DiagramBuilder builder, @NotNull DiagramNode node, Object element, boolean selected) {
+    return super.getNodeForeground(builder, node, element, selected);
+  }
+
+  @Override
+  public @NotNull Color getEdgeColor(@NotNull DiagramBuilder builder, @NotNull DiagramEdge edge) {
     final String edgeType = edge.getRelationship().toString();
+
     if ("SOFT".equals(edgeType)) {
-      return new JBColor(new Color(9, 128, 0), new Color(83, 128, 103));
+      return JBColor.green; // new JBColor(new Color(9, 128, 0), new Color(83, 128, 103));
     }
     if ("STRONG".equals(edgeType)) {
-      return new JBColor(new Color(0, 26, 128), new Color(140, 177, 197));
+      return JBColor.blue; // new JBColor(new Color(0, 26, 128), new Color(140, 177, 197));
     }
-    return super.getEdgeColor(edge);
+    return super.getEdgeColor(builder, edge);
   }
 }

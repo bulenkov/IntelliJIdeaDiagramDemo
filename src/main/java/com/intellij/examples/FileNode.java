@@ -31,7 +31,7 @@ public class FileNode extends DiagramNodeBase<VirtualFile> {
   private final VirtualFile myFile;
 
   public FileNode(VirtualFile file) {
-    super(FileDiagramProvider.getInstance());
+    super(FileDiagramProvider.findByID(FileDiagramProvider.ID));
     myFile = file;
   }
 

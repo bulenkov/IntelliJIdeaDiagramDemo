@@ -36,12 +36,13 @@ import java.util.List;
  * @author Konstantin Bulenkov
  */
 public class FileDiagramDataModel extends DiagramDataModel<VirtualFile> {
+
   private List<FileNode> myNodes = new ArrayList<FileNode>();
   private List<FileEdge> myEdges = new ArrayList<FileEdge>();
   private Map<String, FileNode> path2Node = new HashMap<String, FileNode>(myNodes.size());
 
   public FileDiagramDataModel(Project project, VirtualFile file) {
-    super(project, FileDiagramProvider.getInstance());
+    super(project, FileDiagramProvider.findByID(FileDiagramProvider.ID));
     VirtualFile f = file;
     while (f != null) {
       final FileNode n = new FileNode(f);
