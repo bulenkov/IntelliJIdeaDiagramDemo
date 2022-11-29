@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '1.2.0'
+}
+
+group 'com.intellij.examples'
+version '2.0'
+
+sourceCompatibility = JavaVersion.VERSION_11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}
+
+intellij {
+    version = '2021.2'
+    pluginName = 'diagrams-demo'
+    type = 'IU' // the uml plugin is only shipped with Ultimate
+    plugins = ['uml']
+    updateSinceUntilBuild = false
+}
+patchPluginXml {
+    changeNotes = """Updated to run in <em>Intellij Ultimate 2021.*</em>"""
+}
+
+apply plugin: 'idea'
+idea {
+    project {
+        jdkName = '11'
+        languageLevel = JavaVersion.VERSION_11
+        vcs = 'Git'
+    }
+}
